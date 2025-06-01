@@ -1,0 +1,9 @@
+// this is test for syntax highlighting
+public $foo = bar;
+// this is comment even with keyword: public 
+public $baz = $other <T:+> | token <L:*>;
+$other = $NULL {tag} $GARBAGE <2-4> $another;
+$another = (this | is | sequence | of | alternatives);
+$optionals = this is [optional] sequence;
+$boo = $BEGIN {some other_tag} | bizz <G:2-5> $END;
+$invalid = some tokens $VOID;

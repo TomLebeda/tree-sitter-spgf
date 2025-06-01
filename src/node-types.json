@@ -1,0 +1,407 @@
+[
+  {
+    "type": "bracedSequence",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ruleBody",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "grammar",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "ruleDefinition",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "optionalSequence",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ruleBody",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "repeatOperator",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "repeatFull",
+          "named": true
+        },
+        {
+          "type": "repeatShortcut",
+          "named": true
+        },
+        {
+          "type": "styleSpec",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "repeatShortcut",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ruleAlternative",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ruleElement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ruleBody",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ruleAlternative",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ruleDefinition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ruleBody",
+          "named": true
+        },
+        {
+          "type": "ruleHeader",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ruleElement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "grammarTag",
+          "named": true
+        },
+        {
+          "type": "repeatOperator",
+          "named": true
+        },
+        {
+          "type": "ruleRef",
+          "named": true
+        },
+        {
+          "type": "sequence",
+          "named": true
+        },
+        {
+          "type": "specialBegin",
+          "named": true
+        },
+        {
+          "type": "specialEnd",
+          "named": true
+        },
+        {
+          "type": "specialGarbage",
+          "named": true
+        },
+        {
+          "type": "specialNull",
+          "named": true
+        },
+        {
+          "type": "specialRuleRef",
+          "named": true
+        },
+        {
+          "type": "specialVoid",
+          "named": true
+        },
+        {
+          "type": "token",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ruleHeader",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ruleName",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "ruleName",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ruleRef",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "grammarTag",
+          "named": true
+        },
+        {
+          "type": "repeatOperator",
+          "named": true
+        },
+        {
+          "type": "ruleName",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "sequence",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "bracedSequence",
+          "named": true
+        },
+        {
+          "type": "grammarTag",
+          "named": true
+        },
+        {
+          "type": "optionalSequence",
+          "named": true
+        },
+        {
+          "type": "repeatOperator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "specialRuleRef",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "styleShortcut",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "styleSpec",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "styleShortcut",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "token",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "grammarTag",
+          "named": true
+        },
+        {
+          "type": "repeatOperator",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "$",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "/*",
+    "named": false
+  },
+  {
+    "type": "//",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "<",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": ">",
+    "named": false
+  },
+  {
+    "type": "G",
+    "named": false
+  },
+  {
+    "type": "L",
+    "named": false
+  },
+  {
+    "type": "T",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "grammarTag",
+    "named": true
+  },
+  {
+    "type": "public",
+    "named": false
+  },
+  {
+    "type": "repeatFull",
+    "named": true
+  },
+  {
+    "type": "specialBegin",
+    "named": true
+  },
+  {
+    "type": "specialEnd",
+    "named": true
+  },
+  {
+    "type": "specialGarbage",
+    "named": true
+  },
+  {
+    "type": "specialNull",
+    "named": true
+  },
+  {
+    "type": "specialVoid",
+    "named": true
+  },
+  {
+    "type": "|",
+    "named": false
+  }
+]
