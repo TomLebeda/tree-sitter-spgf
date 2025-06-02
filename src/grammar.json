@@ -139,18 +139,6 @@
           "name": "token"
         },
         {
-          "type": "SYMBOL",
-          "name": "specialRuleRef"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "ruleRef"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "sequence"
-        },
-        {
           "type": "SEQ",
           "members": [
             {
@@ -229,6 +217,14 @@
               }
             }
           ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "ruleRef"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "sequence"
         }
       ]
     },
@@ -366,12 +362,29 @@
       "value": "[0-9]+-[0-9]*"
     },
     "grammarTag": {
-      "type": "PATTERN",
-      "value": "\\{[^}]*\\}"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "braceOpen"
+        },
+        {
+          "type": "PATTERN",
+          "value": "[^}]*"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "braceClose"
+        }
+      ]
     },
-    "specialRuleRef": {
-      "type": "CHOICE",
-      "members": []
+    "braceOpen": {
+      "type": "STRING",
+      "value": "{"
+    },
+    "braceClose": {
+      "type": "STRING",
+      "value": "}"
     },
     "ruleRef": {
       "type": "SEQ",

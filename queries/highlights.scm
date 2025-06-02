@@ -1,9 +1,9 @@
 [ "public" ] @keyword
-[ "(" ")" ] @punctuation.bracket
 [ "<" ">"  ] @punctuation.repeat
+[ "(" ")" ] @punctuation.parentheses
 [ "[" "]"] @punctuation.optional
 ; curly braces for some reason cause problems
-; [ "{" "}"  ] @punctuation.curly_bracket
+[ "{" "}"  ] @punctuation.braces
 [ "|" ";" ] @punctuation.special
 [ "=" ] @punctuation.equals
 

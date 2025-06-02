@@ -7,7 +7,10 @@ module.exports = grammar({
     grammar: ($) => repeat($.ruleDefinition),
 
     comment: ($) =>
-      choice(seq("//", /.*/), seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/")),
+      choice(
+        seq("//", /.*/),
+        seq("/*", /[^*]*\*+([^/*][^*]*\*+)*/, "/")
+      ),
 
     ruleDefinition: ($) =>
       seq(optional("public"), $.ruleHeader, $.ruleBody, ";"),
@@ -25,15 +28,15 @@ module.exports = grammar({
     ruleElement: ($) =>
       choice(
         $.token,
-        $.specialRuleRef,
-        $.ruleRef,
-        $.sequence,
         seq($.specialGarbage, optional($.repeatOperator), repeat($.grammarTag)),
         $.specialVoid,
         seq($.specialNull, repeat($.grammarTag)),
         seq($.specialEnd, repeat($.grammarTag)),
         seq($.specialBegin, repeat($.grammarTag)),
+        $.ruleRef,
+        $.sequence,
       ),
+
     specialGarbage: ($) => "$GARBAGE",
     specialVoid: ($) => "$VOID",
     specialNull: ($) => "$NULL",
@@ -60,12 +63,12 @@ module.exports = grammar({
 
     repeatFull: ($) => /[0-9]+-[0-9]*/,
 
-    grammarTag: ($) => /\{[^}]*\}/,
+    grammarTag: ($) => seq($.braceOpen, /[^}]*/, $.braceClose),
 
-    specialRuleRef: ($) => choice(),
+    braceOpen: ($) => "{",
+    braceClose: ($) => "}",
 
-    ruleRef: ($) =>
-      seq($.ruleName, optional($.repeatOperator), repeat($.grammarTag)),
+    ruleRef: ($) => seq($.ruleName, optional($.repeatOperator), repeat($.grammarTag)),
 
     sequence: ($) =>
       seq(

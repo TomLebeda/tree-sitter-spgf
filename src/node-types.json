@@ -36,6 +36,25 @@
     }
   },
   {
+    "type": "grammarTag",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "braceClose",
+          "named": true
+        },
+        {
+          "type": "braceOpen",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "optionalSequence",
     "named": true,
     "fields": {},
@@ -168,10 +187,6 @@
           "named": true
         },
         {
-          "type": "specialRuleRef",
-          "named": true
-        },
-        {
           "type": "specialVoid",
           "named": true
         },
@@ -251,11 +266,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "specialRuleRef",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "styleShortcut",
@@ -369,7 +379,11 @@
     "named": false
   },
   {
-    "type": "grammarTag",
+    "type": "braceClose",
+    "named": true
+  },
+  {
+    "type": "braceOpen",
     "named": true
   },
   {
