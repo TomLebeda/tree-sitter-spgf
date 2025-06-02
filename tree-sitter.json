@@ -4,14 +4,13 @@
     {
       "name": "spgf",
       "camelcase": "Spgf",
-      "title": "Spgf",
       "scope": "source.spgf",
       "file-types": [
         "spgf"
       ],
       "injection-regex": "^spgf$",
       "class-name": "TreeSitterSpgf",
-      "highlights": "queries/highlights.scm"
+      "highlights": "queries/spgf/highlights.scm"
     }
   ],
   "metadata": {
