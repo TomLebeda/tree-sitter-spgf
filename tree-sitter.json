@@ -10,7 +10,8 @@
         "spgf"
       ],
       "injection-regex": "^spgf$",
-      "class-name": "TreeSitterSpgf"
+      "class-name": "TreeSitterSpgf",
+      "highlights": "queries/highlights.scm"
     }
   ],
   "metadata": {
