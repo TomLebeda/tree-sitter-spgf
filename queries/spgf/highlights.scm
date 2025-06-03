@@ -1,31 +1,34 @@
-[ "public" ] @keyword
-[ "<" ">"  ] @punctuation.repeat
-[ "(" ")" ] @punctuation.parentheses
-[ "[" "]"] @punctuation.optional
-; curly braces for some reason cause problems
-[ "{" "}"  ] @punctuation.braces
-[ "|" ";" ] @punctuation.special
-[ "=" ] @punctuation.equals
+[ "public" ] @keyword.modifier
 
-(specialGarbage) @special.garbage
-(specialVoid) @special.void
-(specialNull) @special.null
-(specialEnd) @special.end
-(specialBegin) @special.begin
+[ "<" ">"  ] @punctuation.special
+[ "(" ")" ] @punctuation.bracket
+[ "[" "]"] @punctuation.bracket
+
+; for some reason, curly brackets (braces) can't be matched the same way normal brackets are
+(braceOpen) @punctuation.bracket
+(braceClose) @punctuation.bracket
+
+[ ";" ":" ] @punctuation.delimiter
+[ "|" "=" ] @operator
+
+(specialGarbage) @constant.builtin
+(specialVoid) @constant.builtin
+(specialNull) @constant.builtin
+(specialEnd) @constant.builtin
+(specialBegin) @constant.builtin
 
 (comment) @comment
 
-(ruleRef) @method.call
-(ruleHeader) @function
+(ruleRef) @function.call
+(ruleHeader) @constructor
 
-(token) @token
+(token) @string
 (grammarTag) @tag
 
-(styleSpec) @style.spec
-(styleShortcut) @style.shortcut
+(styleShortcut) @string.special.symbol
 
-(repeatFull) @repeat.full
-(repeatShortcut) @repeat.shortcut
+(repeatFull) @keyword.repeat
+(repeatShortcut) @operator
 
 (ERROR) @error
 
